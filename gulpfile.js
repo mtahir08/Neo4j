@@ -1,18 +1,16 @@
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
+var nodemon = require('gulp-nodemon');
 
-gulp.task('webserver', function() {
-    gulp.src('./util')
-        .pipe(webserver({
-            livereload: true,
-            //directoryListing: true,
-            directoryListing: {
-                enable: true,
-                path: './client/index.html'
-            },
-            open: true,
-            port: 3000
-        }));
+gulp.task('nodemon', ['watch'], function(){
+    nodemon({
+        script: './server.js'
+    }).on('restart', function(){
+        console.log('nodemon restarted server.js');
+    })
 });
 
-gulp.task('default', ['webserver']);
+gulp.task('watch', function() {
+    gulp.watch('./util/*.js', ['buildServer']);
+});
+
+gulp.task('default', ['nodemon']);

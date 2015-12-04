@@ -1,0 +1,14 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/mtahir08/neo4j",
+  "authors": [
+    "PanaCloud <ziaukhan@hotmail.com>"
+  ],
+  "description": "",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}

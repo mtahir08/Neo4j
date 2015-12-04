@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-nodemon": "^2.0.3",
+    "gulp-watch": "^4.3.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

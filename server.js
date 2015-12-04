@@ -16,7 +16,6 @@ require('./util')(app, neo4j, db);
 
 app.use(express.static('client'));
 
-
 var port = process.env.PORT || 3000;
 var server = app.listen(port, function () {
     var listeningPort = server.address().port;
