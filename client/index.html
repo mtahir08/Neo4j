@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <title>neo4j</title>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./app.js"></script>
+
+</head>
+
+<body data-ng-app="neo4j">
+<div data-ng-controller="neo4jCtrl">
+    <div>
+        <input ng-model="item" type="text">
+        <button ng-click="add(item)">add</button>
+    </div>
+    <ul data-ng-repeat="data in showdata track by $index">
+        <li>{{data}}</li>
+    </ul>
+{{showdata}}
+</div>
+</body>
+</html>
